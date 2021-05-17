@@ -1,0 +1,51 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.model.User;
+import com.example.demo.repo.UserRepository;
+//import com.sun.tools.javac.util.List;
+
+@RestController
+public class UserController {
+	
+	
+	@Autowired
+	private UserRepository repo;
+	
+	
+	@PostMapping("/save")
+	public ResponseEntity<String> store(@RequestBody User user){
+		 repo.save(user);
+		 return new ResponseEntity<String>("User is saved",HttpStatus.OK);
+	}
+	
+	@GetMapping("/all")
+	public List<User> searchAllUsers() {
+		//System.out.println("name is "+name);
+		//return userrepository.findAll();
+		return repo.findAll();
+		//return userservice.findbyfirstnameservice(name);
+		
+	}
+	
+	
+	@DeleteMapping("/udelete/{username}")
+	//@CrossOrigin(allowedHeaders = "*")
+	public ResponseEntity<Object> deletedbyid(@PathVariable String id) {
+		repo.deleteById(id);
+		 return new ResponseEntity<>("Data is deleted successsfully", HttpStatus.OK);
+	}
+	
+
+}

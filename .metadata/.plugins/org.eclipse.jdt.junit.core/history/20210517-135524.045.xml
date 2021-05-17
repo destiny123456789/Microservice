@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RepoTest" project="MicroserviceApplication" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.example.demo.RepoTest" time="0.001">
+    <testcase name="initializationError" classname="com.example.demo.RepoTest" time="0.001">
+      <error>java.lang.NoClassDefFoundError: org/springframework/jdbc/core/ConnectionCallback&#13;
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)&#13;
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3325)&#13;
+	at java.base/java.lang.Class.getMethodsRecursive(Class.java:3466)&#13;
+	at java.base/java.lang.Class.getMethod0(Class.java:3452)&#13;
+	at java.base/java.lang.Class.getMethod(Class.java:2199)&#13;
+	at java.base/java.lang.Class.getEnumConstantsShared(Class.java:3755)&#13;
+	at java.base/java.lang.Class.enumConstantDirectory(Class.java:3786)&#13;
+	at java.base/java.lang.Enum.valueOf(Enum.java:267)&#13;
+	at java.base/sun.reflect.annotation.AnnotationParser.parseEnumValue(AnnotationParser.java:484)&#13;
+	at java.base/sun.reflect.annotation.AnnotationParser.parseMemberValue(AnnotationParser.java:348)&#13;
+	at java.base/java.lang.reflect.Method.getDefaultValue(Method.java:672)&#13;
+	at java.base/sun.reflect.annotation.AnnotationType.&lt;init&gt;(AnnotationType.java:132)&#13;
+	at java.base/sun.reflect.annotation.AnnotationType.getInstance(AnnotationType.java:85)&#13;
+	at java.base/sun.reflect.annotation.AnnotationParser.parseAnnotation2(AnnotationParser.java:267)&#13;
+	at java.base/sun.reflect.annotation.AnnotationParser.parseAnnotations2(AnnotationParser.java:121)&#13;
+	at java.base/sun.reflect.annotation.AnnotationParser.parseAnnotations(AnnotationParser.java:73)&#13;
+	at java.base/java.lang.Class.createAnnotationData(Class.java:3995)&#13;
+	at java.base/java.lang.Class.annotationData(Class.java:3984)&#13;
+	at java.base/java.lang.Class.getAnnotation(Class.java:3867)&#13;
+	at org.junit.internal.builders.IgnoredBuilder.runnerForClass(IgnoredBuilder.java:10)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:70)&#13;
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:37)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:70)&#13;
+	at org.junit.internal.requests.ClassRequest.createRunner(ClassRequest.java:28)&#13;
+	at org.junit.internal.requests.MemoizingRequest.getRunner(MemoizingRequest.java:19)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createUnfilteredTest(JUnit4TestLoader.java:90)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createTest(JUnit4TestLoader.java:76)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.loadTests(JUnit4TestLoader.java:49)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:526)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)&#13;
+Caused by: java.lang.ClassNotFoundException: org.springframework.jdbc.core.ConnectionCallback&#13;
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:606)&#13;
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:168)&#13;
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)&#13;
+	... 32 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

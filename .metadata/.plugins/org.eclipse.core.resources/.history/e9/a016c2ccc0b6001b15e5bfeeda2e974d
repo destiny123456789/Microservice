@@ -1,0 +1,27 @@
+package com.example.demo.contoller;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/consume")
+public class AddUserContoller {
+
+	@PostMapping("/add")
+	public String userAdd@PathVariable(value = "username") String username ){
+		String url = "http://localhost:8081/udelete/" + username;
+		//URI uri = new URI(url);
+		//Object[] objects =  restTemplate.getForObject(url, Object[].class);
+		
+		//ResponseEntity<Object> entity = restTemplate.getForEntity(url, Object.class);
+		restTemplate.delete(url, Object.class);
+
+		//Object object = entity.getBody();
+		//return Arrays.asList(entity);
+		return "User has been deleted";
+
+}
+}
